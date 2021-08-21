@@ -1,0 +1,381 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap");
+
+/* -Reset- */
+* {
+  margin: 0;
+  padding: 0;
+
+  outline: none;
+  border: none;
+
+  -webkit-box-sizing: border-box;
+
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+html,
+body,
+.App {
+  height: 100%;
+  width: 100%;
+  font-family: "Roboto";
+
+  overflow: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* styles VIEW1*/
+.App {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.searchBar {
+  width: 34.6rem;
+
+  margin-top: 1rem;
+  padding: 0.4rem 1rem;
+
+  font-size: 2.5rem;
+
+  -webkit-box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.685);
+
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.685);
+  border-radius: 0.5rem;
+}
+
+a {
+  background-color: orangered;
+
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: white;
+
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+
+  -webkit-transition: background-color 250ms, color 250ms;
+
+  -o-transition: background-color 250ms, color 250ms;
+
+  transition: background-color 250ms, color 250ms;
+}
+
+a:hover {
+  color: orangered;
+  background-color: rgba(255, 68, 0, 0.294);
+}
+
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+li {
+  width: 35rem;
+
+  margin: 3rem 0;
+  padding: 1rem;
+  border-radius: 1rem;
+
+  -webkit-box-shadow: 0 0 12px 5px rgba(0, 0, 0, 0.253);
+
+  box-shadow: 0 0 12px 5px rgba(0, 0, 0, 0.253);
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.trackTitle {
+  font-size: 3rem;
+  font-weight: bolder;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.playAndImageArea {
+  position: relative;
+}
+
+.blackBg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.774);
+
+  opacity: 0;
+  border-radius: 1rem;
+
+  top: 0;
+  position: absolute;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  -webkit-transition: opacity 300ms;
+
+  -o-transition: opacity 300ms;
+
+  transition: opacity 300ms;
+}
+
+.blackBg:hover {
+  opacity: 1;
+}
+
+.playButton {
+  width: 8.5rem;
+  height: 8.5rem;
+  background-color: rgba(0, 0, 0, 0.63);
+
+  border: 3px solid white;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  font-size: 6rem;
+  color: white;
+}
+
+.imageArea {
+  width: 30rem;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.imageArea img {
+  border-radius: 1rem;
+}
+
+.favoriteButton {
+  font-size: 2.5rem;
+
+  cursor: pointer;
+
+  margin: 1rem 0;
+}
+
+.deezerLink {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: white;
+
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+
+  background-color: orangered;
+
+  -webkit-transition: background-color 250ms, color 250ms;
+
+  -o-transition: background-color 250ms, color 250ms;
+
+  transition: background-color 250ms, color 250ms;
+}
+
+.deezerLink:hover {
+  color: orangered;
+  background-color: rgba(255, 68, 0, 0.294);
+}
+
+.informations {
+  font-size: 1.5rem;
+}
+
+.informations span {
+  color: green;
+}
+
+/* STYLES VIEW2 */
+.deleteButton {
+  font-size: 2.5rem;
+  color: red;
+
+  cursor: pointer;
+
+  margin: 1rem 0;
+}
+
+.backButton {
+  width: 5.3rem;
+  height: 5.3rem;
+  background-color: orangered;
+
+  border: 0.4rem solid rgb(189, 84, 46);
+  border-radius: 5.5rem;
+
+  font-size: 3rem;
+  font-weight: bolder;
+  color: rgb(253, 253, 253);
+
+  cursor: pointer;
+
+  -webkit-transition: background-color 250ms, color 250ms;
+
+  -o-transition: background-color 250ms, color 250ms;
+
+  transition: background-color 250ms, color 250ms;
+}
+
+.backButton:hover {
+  background-color: rgb(253, 253, 253);
+  border: 0.4rem solid rgb(189, 84, 46);
+  color: rgb(189, 84, 46);
+}
+
+/* RESPONSIVE */
+@media (min-width: 2000px) and (max-width: 2560px) {
+  .searchBar {
+    width: 70rem;
+    height: 6rem;
+  }
+
+  a {
+    font-size: 2.6rem;
+  }
+
+  li {
+    width: 50rem;
+    padding: 2rem 0;
+  }
+
+  .trackTitle {
+    font-size: 6rem;
+  }
+
+  img {
+    width: 20rem;
+  }
+
+  audio {
+    display: none;
+  }
+
+  .favoriteButton,
+  .deleteButton {
+    font-size: 6rem;
+  }
+
+  .deezerLink {
+    width: 40rem;
+    height: 5rem;
+
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    font-size: 2.5rem;
+  }
+
+  .informations {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .searchBar {
+    width: 30rem;
+  }
+  li {
+    width: 30rem;
+  }
+}
+
+@media (max-width: 300px) {
+  .searchBar {
+    width: 25rem;
+  }
+
+  audio {
+    width: 25rem;
+  }
+
+  li {
+    width: 25rem;
+  }
+}
