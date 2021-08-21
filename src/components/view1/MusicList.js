@@ -36,7 +36,9 @@ const MusicList = () => {
   });
 
   useEffect(() => {
-    audiosRef.current.forEach((item) => (item.volume = 0.1));
+    audiosRef.current.forEach((item) => {
+      if (item !== null) item.volume = 0.1;
+    });
 
     favoriteList.forEach((item) => {
       buttonsRef.current.forEach((btn) => {
