@@ -5,14 +5,14 @@ import { useFavoriteList } from "../../context/FavoriteContext";
 const MusicList = () => {
   const [musicsA, setMusicsA] = useState([]);
   const [favoriteButtonColor, setFavoriteButtonColor] = useState("");
-  const [isAudioPlaying, setIsAudioPlaying] = useState([]);
+  const [isAudioPlaying, setIsAudioPlaying] = useState([false]);
 
   const buttonsRef = useRef([]);
   const audiosRef = useRef([]);
   const playButtonsRef = useRef([]);
 
   const { searchValue, setSearchValue } = useSearchValue("");
-  const { favoriteList, setFavoriteList } = useFavoriteList();
+  const { favoriteList, setFavoriteList } = useFavoriteList([]);
 
   useEffect(() => {
     const CORS = "https://api.allorigins.win/raw?url=";
@@ -36,10 +36,6 @@ const MusicList = () => {
   });
 
   useEffect(() => {
-    audiosRef.current.forEach((item) => {
-      if (item !== null) item.volume = 0.1;
-    });
-
     favoriteList.forEach((item) => {
       buttonsRef.current.forEach((btn) => {
         if (btn !== null) {
@@ -55,6 +51,12 @@ const MusicList = () => {
         btn.style.color = "#000000";
       });
     }
+  });
+
+  useEffect(() => {
+    audiosRef.current.forEach((item) => {
+      if (item !== null) item.volume = 0.1;
+    });
   });
 
   useEffect(() => {
